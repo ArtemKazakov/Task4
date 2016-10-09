@@ -14,7 +14,7 @@ public class Main {
         System.out.println("Matrix 2:");
         Printer.printMatrix(matrix2);
 
-        int[][] multiplyMatrix1 = Calculator.multiplySquareMatrices(matrix1, matrix2, -1);
+        int[][] multiplyMatrix1 = Calculator.multiplySquareMatrices(matrix1, matrix2, 50);
         System.out.println("Multiply matrix:");
         Printer.printMatrix(multiplyMatrix1);
     }

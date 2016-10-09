@@ -7,7 +7,6 @@ public class Calculator {
 
     private static int rowCount;
     private static int colCount;
-    private static int[] coords = {0 ,0};
 
     public static int[][] multiplySquareMatrices(int[][] firstMatrix, int[][] secondMatrix, int threadCount){
         rowCount = firstMatrix.length;
