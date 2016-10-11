@@ -1,4 +1,4 @@
-package com.epam.task4.logic;
+package com.epam.task6.logic;
 
 import java.util.Arrays;
 
@@ -12,9 +12,9 @@ public class ElementIndexes {
     private boolean done;
 
     public int[] getIndexes() {
-            int[] returnCoords = Arrays.copyOf(indexes, indexes.length);
+            int[] returnIndexes = Arrays.copyOf(indexes, indexes.length);
             nextIndexes();
-            return returnCoords;
+            return returnIndexes;
     }
 
     public ElementIndexes(int colCount, int rowCount){

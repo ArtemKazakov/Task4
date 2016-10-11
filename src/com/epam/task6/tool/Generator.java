@@ -1,4 +1,4 @@
-package com.epam.task4.tool;
+package com.epam.task6.tool;
 
 import java.util.Random;
 

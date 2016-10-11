@@ -1,4 +1,4 @@
-package com.epam.task4.logic;
+package com.epam.task6.logic;
 
 /**
  * Created by ASUS on 09.10.2016.
