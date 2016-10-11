@@ -3,10 +3,10 @@ package com.epam.task6.logic;
 /**
  * Created by ASUS on 09.10.2016.
  */
-public class Calculator {
+public class MatrixMultiplier {
 
     public static int[][] multiplySquareMatricesWithNoLimitThreads(int[][] firstMatrix, int[][] secondMatrix){
-        int threadCount =  (int)Math.ceil(Math.pow(firstMatrix.length, 2)/2);
+        int threadCount =  (int)Math.ceil(firstMatrix.length/2);
         return multiplySquareMatrices(firstMatrix, secondMatrix, threadCount);
     }
 
@@ -15,12 +15,12 @@ public class Calculator {
         return multiplySquareMatrices(firstMatrix, secondMatrix, threadCount);
     }
 
-    private static int[][] multiplySquareMatrices(int[][] firstMatrix, int[][] secondMatrix, int threadCount){
+    public static int[][] multiplySquareMatrices(int[][] firstMatrix, int[][] secondMatrix, int threadCount){
         int rowCount = firstMatrix.length;
         int colCount = secondMatrix[0].length;
         int[][] resultMatrix = new int[rowCount][colCount];
 
-        if((threadCount < 1)||(threadCount > Math.ceil(Math.pow(resultMatrix.length, 2)/2))){
+        if((threadCount < 1)||(threadCount > Math.ceil(resultMatrix.length/2))){
             throw new IllegalArgumentException("Incorrect thread number.");
         }
 
@@ -42,10 +42,5 @@ public class Calculator {
 
         return resultMatrix;
     }
-
-    private static void getFreeThread(){
-
-    }
-
 
 }
