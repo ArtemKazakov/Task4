@@ -5,6 +5,8 @@ package com.epam.task6.logic;
  */
 public class MatrixMultiplier {
 
+    private static String THREAD_NUMBER_ERR_MSG = "Incorrect thread number.";
+
     public static int[][] multiplySquareMatricesWithNoLimitThreads(int[][] firstMatrix, int[][] secondMatrix){
         int threadCount =  (int)Math.ceil(firstMatrix.length/2);
         return multiplySquareMatrices(firstMatrix, secondMatrix, threadCount);
@@ -21,7 +23,7 @@ public class MatrixMultiplier {
         int[][] resultMatrix = new int[rowCount][colCount];
 
         if((threadCount < 1)||(threadCount > Math.ceil(resultMatrix.length/2))){
-            throw new IllegalArgumentException("Incorrect thread number.");
+            throw new IllegalArgumentException(THREAD_NUMBER_ERR_MSG);
         }
 
         MultiplierThread[] multiplierThreads = new MultiplierThread[threadCount];
